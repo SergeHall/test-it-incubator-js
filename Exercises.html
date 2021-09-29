@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Мои первые шаги в WEB">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Serge">
+    <title>Тестовое задание для попадания в Инкубатор</title>
+</head>
+<style>
+    .img-google {
+        position: fixed;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .input-google {
+        font-size: 13pt;
+        position: fixed;
+        left: 50%;
+        top: 33%;
+        transform: translate(-50%, -50%);
+        width: 520px;
+        height: 50px;
+        padding-left: 50px;
+        border: 1px solid #ff0000;
+        border-radius: 25px; /*Закругляем уголки*/
+        background: url(https://image.flaticon.com/icons/svg/49/49116.svg) no-repeat 15px 17px;
+        background-size: auto 32%;
+    }
+
+    .input-google:focus {
+        outline: none;
+        border-color: #cecece;
+        box-shadow: 0 0 10px #cecece;
+    }
+
+    .input-google:hover {
+        outline: none;
+        border-color: #cecece;
+        box-shadow: 0 0 10px #ff0000;
+    }
+
+    .div1 {
+        float: left;
+        display: inline;
+        text-align: center;
+        padding: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .div2 {
+        float: right;
+        display: inline;
+        text-align: center;
+        padding: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* непросмотренная ссылка */
+    a:link {
+        color: #292929;
+        text-decoration: none;
+    }
+
+    /* наведите указатель мыши на ссылку */
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content2 {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 10px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .div2:hover .dropdown-content1 {
+        display: block;
+    }
+
+    .div2:hover .dropdown-content2 {
+        display: block;
+    }
+
+    .button-div {
+        position: fixed;
+        left: 50%;
+        top: 39%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button {
+        font-size: 14px;
+        border: none;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 6px 4px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .button1 {
+        color: white;
+        background-color: #4CAF50;
+    }
+
+    .button1:hover {
+        outline: none;
+        border-color: #888888;
+        box-shadow: 0 0 3px #888888;
+    }
+
+    .button2 {
+        background-color: #F8F8F8;
+    }
+
+    .button2:hover {
+        outline: none;
+        border-color: #888888;
+        box-shadow: 0 0 3px #888888;
+    }
+
+    .button-array {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-sum {
+        position: fixed;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-min-max {
+        position: fixed;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-change {
+        position: fixed;
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-max {
+        position: fixed;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .button-timer {
+        position: fixed;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
+
+    }
+
+</style>
+
+<body>
+
+<div class="div1">
+    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+</div>
+<div class="div1">
+    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">Store</a>
+</div>
+
+<div class="div2">
+    <a href="https://www.google.com/?client=safari">
+        <img src="pictures/google-account.png" alt="google-account" height="23" width="23"/>
+        <div class="dropdown-content2">
+            <p>Google Account</p>
+        </div>
+    </a>
+</div>
+
+<div class="div2">
+    <a href="https://www.google.com/?client=safari">
+        <img src="pictures/six_points.png" alt="Google apps" height="23" width="23"/>
+        <div class="dropdown-content1">
+            <p>Google apps</p>
+        </div>
+    </a>
+</div>
+
+<div class="div2">
+    <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Images</a>
+</div>
+
+<div class="div2">
+    <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a>
+</div>
+
+<div>
+    <label for="myInput"></label><input class="input-google" type="search" value="" id="myInput">
+</div>
+
+<div class="button-div">
+    <button class="button button1" id="input-button">Google Search</button>
+    <button class="button button2" onclick="alert('Sounds like everything worked out.')">I'm Feeling Lucky</button>
+</div>
+
+<div class="button-array">
+    <button class="button button1" id="button-array">Exercise 5</button>
+</div>
+
+<div class="button-sum">
+    <button class="button button1" id="button-sum">Exercise 6</button>
+</div>
+
+<div class="button-min-max">
+    <button class="button button1" id="button-min-max">Exercise 7</button>
+</div>
+
+<div class="button-change">
+    <button class="button button1" id="button-change">Exercise 8</button>
+</div>
+
+<div class="button-max">
+    <button class="button button1" id="button-max">Exercise 9</button>
+</div>
+
+<div class="button-timer">
+    <button class="button button1" id="button-timer">Exercise 10</button>
+</div>
+
+
+<div class="img-google"><img src="pictures/googlelogo_color_300x101.png" alt="Google logo" height="101" width="300"/>
+</div>
+
+<script>
+  'use strict';
+  // 3. JS: кликаем по кнопке - видим в alert-е то, что введено в поле поиска. Не использовать onclick атрибут в разметке кода.
+  // 4. Если ввести в поиск слово google и нажать кнопку НАЙТИ, то нужно показать в алерте “Yandex круче. Но это не точно”
+  let searchInput = document.getElementById("myInput");
+
+  let searchButton = document.getElementById("input-button");
+
+  searchButton.addEventListener("click", search);
+
+  function search() {
+    if (searchInput.value === "google" || searchInput.value === "Google") {
+      alert("Yandex круче. Но это не точно");
+    } else alert(searchInput.value);
+  }
+</script>
+
+<script>
+  'use strict';
+  // 5. Создать массив объектов. 3-4 объекта, каждый имеет свойства name и age. При нажатии на кнопку
+  // НАЙТИ также вывести ещё и св-во name первого объекта в массиве
+  let objects = []; // создаем массив
+
+  // заполняем обьект рандомными именами и годами
+  for (let i = 0; i < 4; i++) {
+    const name = ["Bill", "Maya", "Victoria", "Dany", "Serge", "Dimich", "Junior", "Gloria", "Kolya", "Danila", "Olga"];
+    const random = Math.floor(Math.random() * name.length);
+
+    let n = Math.floor(Math.random() * 35) + 10;
+    let m = Math.floor(Math.random() * 35) + 10;
+
+    objects.push({'name': `${name[random]}`, 'age': n + m});
+  }
+
+  let arrayButton = document.getElementById("button-array");
+
+  arrayButton.addEventListener("click", show);
+
+  function show() {
+    alert(JSON.stringify(objects));
+    alert("My name is " + objects.shift().name);
+  }
+</script>
+
+<script>
+  'use strict';
+  // 6. Создать функцию superSum, которая будет в алерте показывать сумму ЛЮБЫХ двух чисел,
+  // переданных этой функции через параметры
+  let sumButton = document.getElementById("button-sum");
+
+  sumButton.addEventListener("click", sum);
+
+  function sum() {
+    let a = +prompt("Enter the first number", "")
+    let b = +prompt("Enter the second number", "")
+    let result = a + b;
+    alert(JSON.stringify("The sum is " + result));
+  }
+</script>
+
+<script>
+  'use strict';
+  // 7. Создать массив из чисел в перемешку (не отсортированы).
+  // С помощью цикла for найти максимальный и минимальный элементы в массиве
+  let minMaxButton = document.getElementById("button-min-max");
+
+  minMaxButton.addEventListener("click", getMaxMin);
+
+  function getMaxMin() {
+
+    let array = [];
+
+    // заполняем объектами
+    for (let i = 0; i < 20; i++) {
+      array.push(Math.floor(Math.random() * 1000));
+    }
+
+    let max = 0;
+    let min = array[0];
+
+    array.forEach((value) => {
+      if (value > max) {
+        max = value;
+      } else if (value < min) {
+        min = value
+      }
+    })
+
+    alert(JSON.stringify("Array is " + array));
+    alert("The maximum number in the array is " + max)
+    alert("The minimum number in the array is " + min)
+
+  }
+</script>
+
+<script>
+  'use strict';
+  // 8. Создать 2 переменные a и b… присвоить им любые значения. Потом программно поменять эти значения местами,
+  // не используя значения напрямую
+
+  let changeButton = document.getElementById("button-change");
+
+  changeButton.addEventListener("click", change);
+
+  function change() {
+    let a = prompt("Enter a ", "")
+    let b = prompt("Enter b ", "")
+    let c = a;
+    a = b;
+    b = c;
+    alert(JSON.stringify("New a = " + a));
+    alert(JSON.stringify("New b = " + b));
+  }
+</script>
+
+<script>
+  'use strict';
+  // 9. Оформить алгоритм поиска максимального числа в массиве как функцию findMax (чтобы можно было передавать
+  // в неё любой массив чисел, а на выходе она возвращала нам максимальное число из массива)
+  let maxButton = document.getElementById("button-max");
+
+  maxButton.addEventListener("click", findMax);
+
+  function findMax() {
+
+    let array = [];
+    // заполняем объектами
+    for (let i = 0; i < 20; i++) {
+      array.push(Math.floor(Math.random() * 1000));
+    }
+
+    let max_of_array = Math.max.apply(Math, array);
+
+    alert(JSON.stringify("Array is " + array));
+    alert("The maximum number in the array is " + max_of_array)
+  }
+</script>
+
+<script>
+  'use strict';
+  // 10. Показать alert с результатом поиска не сразу, а через 3 секунды после нажатия (всё то же самое,
+  // как и работало, в частности с “яндекс круче всех”, но с задержкой в 3 секунды)
+
+  let searchInputTimer = document.getElementById("myInput");
+
+  let searchButtonTimer = document.getElementById("button-timer");
+
+  searchButtonTimer.addEventListener("click", searchTimer);
+
+  //Display an alert box after 3 seconds (3000 milliseconds)
+  function searchTimer() {
+    setTimeout(() => {
+      if (searchInputTimer.value === "google" || searchInputTimer.value === "Google") {
+        alert("Yandex круче. Но это не точно");
+      } else alert(searchInputTimer.value);
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
+
