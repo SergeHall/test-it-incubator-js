@@ -192,10 +192,12 @@
 <body>
 
 <div class="div1">
-    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+    <a href="https://about.google/?fg=1&utm_source=google-
+    US&utm_medium=referral&utm_campaign=hp-header">About</a>
 </div>
 <div class="div1">
-    <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">Store</a>
+    <a href="https://about.google/?fg=1&utm_source=google-US&utm_
+    medium=referral&utm_campaign=hp-header">Store</a>
 </div>
 
 <div class="div2">
@@ -230,7 +232,8 @@
 
 <div class="button-div">
     <button class="button button1" id="input-button">Google Search</button>
-    <button class="button button2" onclick="alert('Sounds like everything worked out.')">I'm Feeling Lucky</button>
+    <button class="button button2"
+            onclick="alert('Sounds like everything worked out.')">I'm Feeling Lucky</button>
 </div>
 
 <div class="button-array">
@@ -258,13 +261,16 @@
 </div>
 
 
-<div class="img-google"><img src="pictures/googlelogo_color_300x101.png" alt="Google logo" height="101" width="300"/>
+<div class="img-google"><img src="pictures/googlelogo_color_300x101.png"
+                             alt="Google logo" height="101" width="300"/>
 </div>
 
 <script>
   'use strict';
-  // 3. JS: кликаем по кнопке - видим в alert-е то, что введено в поле поиска. Не использовать onclick атрибут в разметке кода.
-  // 4. Если ввести в поиск слово google и нажать кнопку НАЙТИ, то нужно показать в алерте “Yandex круче. Но это не точно”
+  // 3. JS: кликаем по кнопке - видим в alert-е то, что введено в поле поиска.
+  // Не использовать onclick атрибут в разметке кода.
+  // 4. Если ввести в поиск слово google и нажать кнопку НАЙТИ, то нужно показать
+  // в алерте “Yandex круче. Но это не точно”
   let searchInput = document.getElementById("myInput");
 
   let searchButton = document.getElementById("input-button");
@@ -280,13 +286,15 @@
 
 <script>
   'use strict';
-  // 5. Создать массив объектов. 3-4 объекта, каждый имеет свойства name и age. При нажатии на кнопку
-  // НАЙТИ также вывести ещё и св-во name первого объекта в массиве
+  // 5. Создать массив объектов. 3-4 объекта, каждый имеет свойства name и age.
+  // При нажатии на кнопку НАЙТИ также вывести ещё и св-во name первого объекта в массиве
+
   let objects = []; // создаем массив
 
   // заполняем обьект рандомными именами и годами
   for (let i = 0; i < 4; i++) {
-    const name = ["Bill", "Maya", "Victoria", "Dany", "Serge", "Dimich", "Junior", "Gloria", "Kolya", "Danila", "Olga"];
+    const name = ["Bill", "Maya", "Victoria", "Dany", "Serge", "Dimich", "Junior",
+      "Gloria", "Kolya", "Danila", "Olga"];
     const random = Math.floor(Math.random() * name.length);
 
     let n = Math.floor(Math.random() * 35) + 10;
@@ -307,8 +315,8 @@
 
 <script>
   'use strict';
-  // 6. Создать функцию superSum, которая будет в алерте показывать сумму ЛЮБЫХ двух чисел,
-  // переданных этой функции через параметры
+  // 6. Создать функцию superSum, которая будет в алерте показывать
+  // сумму ЛЮБЫХ двух чисел, переданных этой функции через параметры
   let sumButton = document.getElementById("button-sum");
 
   sumButton.addEventListener("click", sum);
@@ -358,7 +366,8 @@
 
 <script>
   'use strict';
-  // 8. Создать 2 переменные a и b… присвоить им любые значения. Потом программно поменять эти значения местами,
+  // 8. Создать 2 переменные a и b… присвоить им любые значения.
+  // Потом программно поменять эти значения местами,
   // не используя значения напрямую
 
   let changeButton = document.getElementById("button-change");
@@ -378,8 +387,10 @@
 
 <script>
   'use strict';
-  // 9. Оформить алгоритм поиска максимального числа в массиве как функцию findMax (чтобы можно было передавать
-  // в неё любой массив чисел, а на выходе она возвращала нам максимальное число из массива)
+  // 9. Оформить алгоритм поиска максимального числа в массиве
+  // как функцию findMax (чтобы можно было передавать
+  // в неё любой массив чисел, а на выходе она возвращала
+  // нам максимальное число из массива)
   let maxButton = document.getElementById("button-max");
 
   maxButton.addEventListener("click", findMax);
@@ -401,8 +412,10 @@
 
 <script>
   'use strict';
-  // 10. Показать alert с результатом поиска не сразу, а через 3 секунды после нажатия (всё то же самое,
-  // как и работало, в частности с “яндекс круче всех”, но с задержкой в 3 секунды)
+  // 10. Показать alert с результатом поиска не сразу,
+  // а через 3 секунды после нажатия (всё то же самое,
+  // как и работало, в частности с “яндекс круче всех”,
+  // но с задержкой в 3 секунды)
 
   let searchInputTimer = document.getElementById("myInput");
 
